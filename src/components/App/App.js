@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import UserContext from '../../context';
 import apiBlog from '../../servises';
 import Header from '../../pages/Header';
@@ -22,7 +22,7 @@ const App = () => {
   }, [token]);
   return (
     <UserContext.Provider value={{ token, setToken, user, setUser }}>
-      <div className={classes.App}>
+      <div className={classes.app}>
         <Routes>
           <Route path="/" element={<Header />}>
             <Route path="articles" element={<Articles />}>
@@ -38,9 +38,11 @@ const App = () => {
           <Route
             path="*"
             element={
-              <main style={{ padding: '1rem' }}>
-                <p>There nothing here!</p>
-              </main>
+              <div className={classes['app_not-found']}>
+                <p>
+                  This page does not exist, you can return to the <Link to="/articles">main page!</Link>
+                </p>
+              </div>
             }
           />
         </Routes>

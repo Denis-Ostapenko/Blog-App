@@ -1,6 +1,11 @@
-.App{
+.app {
     background: #ebeef3;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    &_not-found {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
 }
