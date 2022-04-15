@@ -87,7 +87,7 @@ const ProfileForm = ({ formSubmit, user, completed }) => {
 };
 
 ProfileForm.defaultProps = {
-  formSubmit: () => { },
+  formSubmit: () => {},
   completed: false,
   user: {},
 };

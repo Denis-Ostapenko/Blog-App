@@ -5,7 +5,7 @@ import SignInForm from '../components/Sign-in-form';
 import apiBlog from '../servises/servises';
 
 const SignIn = () => {
-  const {setUser, setToken} = useContext(UserContext);
+  const { setUser, setToken } = useContext(UserContext);
   const [serverErrors, setServerErrors] = useState({});
   const navigate = useNavigate();
   const formSubmit = (data) => {

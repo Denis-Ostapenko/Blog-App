@@ -17,8 +17,8 @@ function ArticlesСollection({ newArticle, fullArticle, onDeleteArticle }) {
   const [buttonModals, SetButtonModals] = useState(false);
   const [like, setLike] = useState();
   useEffect(() => {
-    setLike(favorited)
-  }, [favorited])
+    setLike(favorited);
+  }, [favorited]);
   const [likeCount, setLikeCount] = useState(favoritesCount);
   const logUser = user ? { username: user.username, token: user.token } : { username: '', token: '' };
   const OnButtonYes = () => {
@@ -126,8 +126,8 @@ function ArticlesСollection({ newArticle, fullArticle, onDeleteArticle }) {
 
 ArticlesСollection.defaultProps = {
   newArticle: {},
-  onDeleteArticle: () => { },
-  fullArticle: false
+  onDeleteArticle: () => {},
+  fullArticle: false,
 };
 
 ArticlesСollection.propTypes = {
@@ -143,7 +143,7 @@ ArticlesСollection.propTypes = {
     }),
     createdAt: PropTypes.string,
     slug: PropTypes.string,
-    favoritesCount: PropTypes.number
+    favoritesCount: PropTypes.number,
   }),
   fullArticle: PropTypes.bool,
   onDeleteArticle: PropTypes.func,

@@ -24,8 +24,28 @@ const ArticleItem = () => {
   };
   let newArticle = {};
   if (objArticle !== undefined) {
-    const { body, favorited, description, slug, favoritesCount, tagList, title, author: { image, username }, createdAt } = objArticle;
-    newArticle = { body, favorited, description, slug, favoritesCount, tagList, title, author: { image, username }, createdAt };
+    const {
+      body,
+      favorited,
+      description,
+      slug,
+      favoritesCount,
+      tagList,
+      title,
+      author: { image, username },
+      createdAt,
+    } = objArticle;
+    newArticle = {
+      body,
+      favorited,
+      description,
+      slug,
+      favoritesCount,
+      tagList,
+      title,
+      author: { image, username },
+      createdAt,
+    };
   }
   const fullArticle = true;
   const content =

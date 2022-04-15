@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import UserContext from '../../context'
+import UserContext from '../../context';
 import apiBlog from '../../servises';
 import Header from '../../pages/Header';
 import Articles from '../../pages/Articles';

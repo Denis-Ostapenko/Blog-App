@@ -5,7 +5,7 @@ import avatar from '../../images/avatar.jpg';
 import classes from './Header-component.module.scss';
 
 const HeaderComponent = () => {
-  const { user, setUser, setToken } = useContext(UserContext)
+  const { user, setUser, setToken } = useContext(UserContext);
   let avatarImg = '';
   if (user) {
     avatarImg = !user.image ? avatar : user.image;

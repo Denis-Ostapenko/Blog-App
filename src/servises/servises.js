@@ -75,7 +75,7 @@ class ApiBlog {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Token ${token}`,
-        }
+        },
       });
       return user.json();
     } catch (error) {

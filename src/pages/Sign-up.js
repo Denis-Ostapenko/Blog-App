@@ -31,5 +31,4 @@ const SignUp = () => {
   return <SignUpForm formSubmit={formSubmit} serverErrors={serverErrors} />;
 };
 
-
 export default SignUp;

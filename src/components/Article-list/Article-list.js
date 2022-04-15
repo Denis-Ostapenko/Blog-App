@@ -15,7 +15,9 @@ const ArticleList = () => {
   useEffect(() => {
     const page = params.page ? Number(params.page?.split('=')[1]) : 1;
     setNumberPage(page);
-    apiBlog.getArticles(page * 5 - 5, token).then((res) => {setArrArticle(res)});
+    apiBlog.getArticles(page * 5 - 5, token).then((res) => {
+      setArrArticle(res);
+    });
   }, [token, params.page]);
   const navigate = useNavigate();
   const paginationChange = (page) => {
@@ -32,13 +34,33 @@ const ArticleList = () => {
         <>
           <ul className={classes.articles__list}>
             {articles?.map((article) => {
-              const { body, favorited, description, slug, favoritesCount, tagList, title, author: { image, username }, createdAt } = article;
-              const newArticle = { body, favorited, description, slug, favoritesCount, tagList, title, author: { image, username }, createdAt }
+              const {
+                body,
+                favorited,
+                description,
+                slug,
+                favoritesCount,
+                tagList,
+                title,
+                author: { image, username },
+                createdAt,
+              } = article;
+              const newArticle = {
+                body,
+                favorited,
+                description,
+                slug,
+                favoritesCount,
+                tagList,
+                title,
+                author: { image, username },
+                createdAt,
+              };
               return (
                 <li className={classes['articles__list-item']} key={article.slug}>
                   <ArticlesСollection newArticle={newArticle} fullArticle={fullArticle} />
                 </li>
-              )
+              );
             })}
           </ul>
           <Pagination
