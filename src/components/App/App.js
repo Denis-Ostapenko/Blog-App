@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import UserContext from '../../context';
 import apiBlog from '../../servises';
 import Header from '../../pages/Header';
@@ -25,6 +25,7 @@ const App = () => {
       <div className={classes.app}>
         <Routes>
           <Route path="/" element={<Header />}>
+            <Route path="/" element={<Navigate to="/articles" />} />
             <Route path="articles" element={<Articles />}>
               <Route path=":page" element={<Articles />} />
             </Route>
