@@ -1,15 +1,15 @@
 # Blog
 ## О чём проект:
-Поиск авиабилетов. Можно искать и фильтровать авиабилеты.
+Примитивная блог-платформа, которая отображает посты пользователей с кратким содержанием, при нажатии на заголовок открывается статья с полным содержанием, есть аутентификация. В данном проекте можно писать, редактировать статьи и оценивать статьи пользователей.
 
 ## Стэк: 
-ES6+, React.js, Redux, CSS Modules, REST API, ESLint, Prettier.
+ES6+, React.js, Router, CSS Modules, REST API, ESLint, Prettier.
 
 ## Команды проекта:
 `npm run start` — запускает сайт для разработки <br>
 `npm run deploy` — деплой проекта на gh-pages
 
-[Ссылка на проект](https://denis-ostapenko.github.io/Aviasales-App/)
+[Ссылка на проект](https://denis-ostapenko.github.io/Blog-App/#/articles)
 
 ## Gif Demo
-![gif demo project](http://g.recordit.co/HGI1itdtqe.gif)
+![gif demo project](http://g.recordit.co/KDV2UVRrbJ.gif)
