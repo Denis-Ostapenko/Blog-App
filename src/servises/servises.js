@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 class ApiBlog {
   async getArticles(offset = 0, token) {
-    const api = await fetch(`https://kata.academy:8021/api/articles?limit=5&offset=${offset}`, {
+    const api = await fetch(`https://blog.kata.academy/api/articles?limit=5&offset=${offset}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ class ApiBlog {
   }
 
   async getArticle(slug, token) {
-    const api = await fetch(`https://kata.academy:8021/api/articles/${slug}`, {
+    const api = await fetch(`https://blog.kata.academy/api/articles/${slug}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ class ApiBlog {
       const body = {
         user: newUser,
       };
-      const registration = await fetch(`https://kata.academy:8021/api/users`, {
+      const registration = await fetch(`https://blog.kata.academy/api/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
@@ -55,7 +55,7 @@ class ApiBlog {
       const body = {
         user,
       };
-      const userIn = await fetch(`https://kata.academy:8021/api/users/login`, {
+      const userIn = await fetch(`https://blog.kata.academy/api/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
@@ -70,7 +70,7 @@ class ApiBlog {
 
   async getUser(token) {
     try {
-      const user = await fetch(`https://kata.academy:8021/api/user`, {
+      const user = await fetch(`https://blog.kata.academy/api/user`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ class ApiBlog {
       const body = {
         user,
       };
-      const api = await fetch(`https://kata.academy:8021/api/user`, {
+      const api = await fetch(`https://blog.kata.academy/api/user`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ class ApiBlog {
       const body = {
         article,
       };
-      const api = await fetch(`https://kata.academy:8021/api/articles`, {
+      const api = await fetch(`https://blog.kata.academy/api/articles`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ class ApiBlog {
       const body = {
         article,
       };
-      const api = await fetch(`https://kata.academy:8021/api/articles/${slug}`, {
+      const api = await fetch(`https://blog.kata.academy/api/articles/${slug}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ class ApiBlog {
 
   async deliteArticle(slug, token) {
     try {
-      const api = await fetch(`https://kata.academy:8021/api/articles/${slug}`, {
+      const api = await fetch(`https://blog.kata.academy/api/articles/${slug}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ class ApiBlog {
 
   async addLike(slug, token) {
     try {
-      const api = await fetch(`https://kata.academy:8021/api/articles/${slug}/favorite`, {
+      const api = await fetch(`https://blog.kata.academy/api/articles/${slug}/favorite`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ class ApiBlog {
 
   async deliteLike(slug, token) {
     try {
-      const api = await fetch(`https://kata.academy:8021/api/articles/${slug}/favorite`, {
+      const api = await fetch(`https://blog.kata.academy/api/articles/${slug}/favorite`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
